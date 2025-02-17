@@ -8,6 +8,8 @@ import {
   Feather,
 } from "@expo/vector-icons";
 
+import profileImage from "../assets/images/john_ross.png";
+
 export default function CustomDrawerContent({ navigation }) {
   const menuItems = [
     { label: "My Mentors", icon: "chalkboard-teacher" },
@@ -34,13 +36,14 @@ export default function CustomDrawerContent({ navigation }) {
   return (
     <DrawerContentScrollView contentContainerStyle={{ flex: 1 }}>
       {/* Profile Section */}
-      <View className="bg-blue-700 p-1 items-center">
+      <View className="flex flex-row bg-customBlueThree p-1 items-center">
         <Image
-          source={{ uri: "https://via.placeholder.com/100" }}
-          className="w-16 h-16 rounded-full mb-3"
+          source={profileImage}
+          style={{ width: 40, height: 40 }}
+          className=" rounded-full m-2 p-5"
         />
         <Text className="text-white text-lg font-semibold">John Ross</Text>
-        <Ionicons name="chevron-down" size={20} color="white" />
+        {/* <Ionicons name="chevron-down" size={20} color="white" /> */}
       </View>
 
       {/* Menu Items */}
